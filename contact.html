@@ -62,13 +62,13 @@
                         <a href="">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
-                        <a href="">
+                        <a href="https://www.linkedin.com/in/andy-gerred-0b575068/">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </div>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+</div>
                 </div>
             </div>
             <div class="header_bottom">
@@ -135,24 +135,25 @@
                         </P>
                         <div class="heading_container">
                             <h2>
-                                ...OR LEAVE A MESSAGE & WE'LL GET BACK TO YOU
+                                ...OR LEAVE A MESSAGE
                             </h2>
                         </div>
                         <div class="form_container">
-                            <form action="">
+                            <form id="contact-form" method="post" action="send_email.php">
                                 <div>
-                                    <input type="text" placeholder="Your Name" />
+                                    <input type="text" placeholder="Your Name" id="name" name="name"/>
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="Phone Number" />
+                                    <input type="text" placeholder="Phone Number" id="phone" name="phone"/>
                                 </div>
                                 <div>
-                                    <input type="email" placeholder="Email" />
+                                    <input type="email" placeholder="Email" id="email" name="email"/>
                                 </div>
                                 <div>
-                                    <input type="text" class="message-box" placeholder="Message" />
+                                    <input type="text" class="message-box" placeholder="Message" id="message" name="message"/>
                                 </div>
                                 <div class="btn_box">
+                                    <input type="submit" value="submit" />
                                     <button>
                                         SEND
                                     </button>
@@ -162,6 +163,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <!-- end contact section -->
 
