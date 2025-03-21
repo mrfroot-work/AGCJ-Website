@@ -49,3 +49,37 @@ $('.owl-filter-bar').on('click', '.item', function (e) {
 
     e.preventDefault();
 })
+
+// JavaScript to handle contact form submission and provide feedback
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Get form data
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    // Create an XMLHttpRequest object
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "send_email.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    // Handle the response from the server
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Display success message
+            alert("Email sent successfully!");
+            // Optionally, reset the form
+            document.getElementById("contact-form").reset();
+        } else {
+            // Display error message
+            alert("An error occurred while sending the email.");
+        }
+    };
+
+    // Send the form data to the server
+    xhr.send("name=" + encodeURIComponent(name) +
+        "&email=" + encodeURIComponent(email) +
+        "&message=" + encodeURIComponent(message));
+});
