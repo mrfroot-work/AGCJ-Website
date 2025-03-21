@@ -689,18 +689,18 @@
                             </h2>
                         </div>
                         <div class="form_container">
-                            <form action="">
+                            <form id="contact-form" method="post" action="send_email.php">
                                 <div>
-                                    <input type="text" placeholder="Your Name" />
+                                    <input type="text" placeholder="Your Name" id="name" name="name" required />
                                 </div>
                                 <div>
-                                    <input type="text" placeholder="Phone Number" />
+                                    <input type="text" placeholder="Phone Number" id="phone" name="phone" required />
                                 </div>
                                 <div>
-                                    <input type="email" placeholder="Email" />
+                                    <input type="email" placeholder="Email" id="email" name="email" required />
                                 </div>
                                 <div>
-                                    <input type="text" class="message-box" placeholder="Message" />
+                                    <input type="text" class="message-box" placeholder="Message" id="message" name="message" required />
                                 </div>
                                 <div class="btn_box">
                                     <button>
