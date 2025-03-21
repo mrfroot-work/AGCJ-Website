@@ -80,6 +80,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 
     // Send the form data to the server
     xhr.send("name=" + encodeURIComponent(name) +
+        "&phone=" + encodeURIComponent(phone) +
         "&email=" + encodeURIComponent(email) +
         "&message=" + encodeURIComponent(message));
 });
