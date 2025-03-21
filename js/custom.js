@@ -74,7 +74,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
             document.getElementById("contact-form").reset();
         } else {
             // Display error message
-            alert("An error occurred while sending the email.");
+            alert("Sorry, an unexpected error occurred while trying to leave a message. Try the email link instead.");
         }
     };
 
