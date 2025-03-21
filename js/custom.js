@@ -69,7 +69,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             // Display success message
-            alert("Email sent successfully!");
+            alert("Message left successfully!");
             // Optionally, reset the form
             document.getElementById("contact-form").reset();
         } else {
