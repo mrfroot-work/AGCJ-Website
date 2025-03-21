@@ -22,6 +22,6 @@ $headers = "From: " . $name . " <" . $email . ">";
 if (mail($to, $subject, $body, $headers)) {
   echo "Email sent successfully!";
 } else {
-  echo "An error occurred while sending the email.";
+  echo "Sorry, an unexpected error occurred while trying to leave a message. Try the email link instead.";
 }
 ?>
