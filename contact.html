@@ -49,9 +49,9 @@
                 // these IDs from the previous steps
                 emailjs.sendForm('service_nr3714s', 'template_fs7q1vt', this)
                     .then(() => {
-                        console.log('SUCCESS!');
+                        console.log('SUCCESS!') alert("Thankyou, your message has been left");
                     }, (error) => {
-                        console.log('FAILED...', error);
+                        console.log('FAILED...', error) alert("Sorry, your message could not be left at this time. Please try the email or phone details to get in touch.");
                     });
             });
         }
