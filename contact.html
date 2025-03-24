@@ -50,10 +50,12 @@
                 emailjs.sendForm('service_nr3714s', 'template_fs7q1vt', this)
                     .then(() => {
                         console.log('SUCCESS!');
-                        alert("Thankyou, your message has been left");
+                        alert("Thankyou for leaving a message. We'll be in touch shortly.");
+                        href = "index.html";
                     }, (error) => {
                         console.log('FAILED...', error);
-                        alert("Sorry, your message could not be left at this time. Please try the email or phone details to get in touch.");
+                        alert("Sorry, your message could not be left at this time. Please try email or phone to get in touch.");
+                        href = "index.html";
                     });
             });
         }
