@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="Electrical, Jointing, Infrastructure, ICP, Connection, Provider" />
-  <meta name="description" content="AG Cable Jointing Website - Home/Index Page" />
-  <meta name="author" content="Malcolm Foort" />
-  <meta name="google" content="notranslate">
-  <meta http-equiv="Content-Language" content="en">
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="Electrical, Jointing, Infrastructure, ICP, Connection, Provider" />
+    <meta name="description" content="AG Cable Jointing Website - Home/Index Page" />
+    <meta name="author" content="Malcolm Foort" />
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
 
-  <title>AG Cable Jointing Ltd</title>
-  <link rel="icon" type="image" href="images/AGLogo.ico">
+    <title>AG Cable Jointing Ltd</title>
+    <link rel="icon" type="image" href="images/AGLogo.ico">
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+
+    <!-- EmailJS: load the EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- EmailJS: initialise the SDK with public key -->
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "kM0y3IZbS6xJYkb0u",
+            });
+        })();
+    </script>
+
+    <!-- EmailJS: contact form submission -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('service_nr3714s', 'template_fs7q1vt', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        alert("Thankyou for leaving a message. We'll be in touch shortly.");
+                        // return user to homepage after message delivery
+                        window.location.href = "index.html";
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                        alert("Sorry, your message could not be left at this time. Please try email or phone to get in touch.");
+                        // return user to homepage after message delivery
+                        window.location.href = "index.html";
+                    });
+            });
+        }
+    </script>
+
 </head>
 
 <body>
@@ -703,9 +738,7 @@
                                     <input type="text" class="message-box" placeholder="Message" id="message" name="message" required />
                                 </div>
                                 <div class="btn_box">
-                                    <button>
-                                        SEND
-                                    </button>
+                                    <button type="submit">SEND</button>
                                 </div>
                             </form>
                         </div>

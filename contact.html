@@ -33,7 +33,10 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
 
+    <!-- EmailJS: load the EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- EmailJS: initialise the SDK with public key -->
     <script type="text/javascript">
         (function () {
             // https://dashboard.emailjs.com/admin/account
@@ -42,19 +45,22 @@
             });
         })();
     </script>
+
+    <!-- EmailJS: contact form submission -->
     <script type="text/javascript">
         window.onload = function () {
             document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('service_nr3714s', 'barf', this)
+                emailjs.sendForm('service_nr3714s', 'template_fs7q1vt', this)
                     .then(() => {
                         console.log('SUCCESS!');
                         alert("Thankyou for leaving a message. We'll be in touch shortly.");
+                        // return user to homepage after message delivery
                         window.location.href = "index.html";
                     }, (error) => {
                         console.log('FAILED...', error);
                         alert("Sorry, your message could not be left at this time. Please try email or phone to get in touch.");
+                        // return user to homepage after message delivery
                         window.location.href = "index.html";
                     });
             });
