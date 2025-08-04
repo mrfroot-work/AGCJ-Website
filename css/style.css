@@ -739,9 +739,7 @@ a:focus {
 }
 
 .client_section .img-box {
-  width: 513px;
-  height: 513px;
-  max-width: 513px;
+
   border-radius: 30px;
   overflow: hidden;
   margin-right: 0px;
