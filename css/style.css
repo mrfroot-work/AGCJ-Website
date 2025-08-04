@@ -739,7 +739,7 @@ a:focus {
 
 .client_section .box .img-box {
   width: 300px;
-  height: 381px;
+  height: 300px;
   max-width: 300px;
   border-radius: 30px;
   overflow: hidden;
@@ -750,6 +750,7 @@ a:focus {
 
 .client_section .box .img-box img {
   width: 100%;
+  height: auto;
 }
 
 .client_section .box .client_info {
