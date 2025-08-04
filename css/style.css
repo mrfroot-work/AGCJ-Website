@@ -731,14 +731,12 @@ a:focus {
   margin: 0;
 }
 
-    .client_section .img-box {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
+.client_section .img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
 
 .client_section .img-box {
   width: 513px;
