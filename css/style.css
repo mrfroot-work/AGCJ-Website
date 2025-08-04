@@ -731,7 +731,7 @@ a:focus {
   margin: 0;
 }
 
-.client_section .box {
+.client_section .img-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
