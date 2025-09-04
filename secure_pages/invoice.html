@@ -51,7 +51,7 @@
         window.onload = function () {
             document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
-                emailjs.sendForm('service_nr3714s', 'template_fs7q1vt', this)
+                emailjs.sendForm('service_nr3714s', 'template_f23gko6', this)
                     .then(() => {
                         console.log('SUCCESS!');
                         alert("Thankyou for uploading your invoice. We will send through confirmation once payment has been made.");
@@ -177,7 +177,10 @@
                                     <input type="text" placeholder="Company Name" id="companyname" name="companyname" required />
                                 </div>
                                 <div>
-                                    <input type="text" class="message-box" placeholder="Additional information about this Invoice" id="message" name="message" required />
+                                    <input type="text" placeholder="Email" id="email" name="email" required />
+                                </div>
+                                <div>
+                                    <input type="text" class="message-box" placeholder="Additional invoice information (optional)" id="message" name="message" required />
                                 </div>
                                 <div class="btn_box">
                                     <button type="submit">SEND</button>
