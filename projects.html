@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Site Metas -->
     <meta name="keywords" content="Electrical, Jointing, Infrastructure, ICP, Connection, Provider" />
-    <meta name="description" content="AG Cable Jointing Website - Contact Us Page" />
+    <meta name="description" content="AG Cable Jointing Website - Projects Page" />
     <meta name="author" content="Malcolm Foort" />
     <meta name="google" content="notranslate">
     <meta http-equiv="Content-Language" content="en">
@@ -32,40 +32,6 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
-
-    <!-- EmailJS: load the EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <!-- EmailJS: initialise the SDK with public key -->
-    <script type="text/javascript">
-        (function () {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-                publicKey: "kM0y3IZbS6xJYkb0u",
-            });
-        })();
-    </script>
-
-    <!-- EmailJS: contact form submission -->
-    <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                emailjs.sendForm('service_nr3714s', 'template_fs7q1vt', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                        alert("Thankyou for leaving a message. We'll be in touch shortly.");
-                        // return user to homepage after message delivery
-                        window.location.href = "index.html";
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                        alert("Sorry, your message could not be left at this time. Please try email or phone to get in touch.");
-                        // return user to homepage after message delivery
-                        window.location.href = "index.html";
-                    });
-            });
-        }
-    </script>
 
 </head>
 
@@ -91,7 +57,8 @@
                     </div>
                     <div class="social_box">
                         <!-- Hiding the FACEBOOK, TWITTER buttons -->
-                        <!-- <a href="">
+                        <!--
+                        <a href="">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
                         <a href="">
@@ -119,7 +86,6 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class=""> </span>
                         </button>
-
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
@@ -131,13 +97,13 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="about.html">ABOUT</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item active">
                                     <a class="nav-link" href="projects.html">PROJECTS</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="industries.html">INDUSTRIES</a>
                                 </li>
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <a class="nav-link" href="contact.html">CONTACT US</a>
                                 </li>
                                 <!-- Hiding the TEAM HUB button -->
@@ -153,58 +119,113 @@
         <!-- end header section -->
     </div>
 
-    <!-- contact section -->
-    <section class="contact_section layout_padding-bottom">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4 col-md-5 offset-md-1">
-                    <div class="detail-box">
-                        <div class="heading_container">
-                            <h2>
-                                CONTACT US...
-                            </h2>
+    <!-- projects section -->
+    <section class="project_section layout_padding">
+        <div class="container">
+            <div class="heading_container">
+                <h2>
+                    RECENT PROJECTS
+                </h2>
+            </div>
+            <div class="carousel-wrap">
+                <div class="filter_box">
+                    <h6>
+                        PROJECT FILTER
+                    </h6>
+                    <nav class="owl-filter-bar">
+                        <a href="#" class="item active" data-owl-filter="*">ALL</a>
+                        <a href="#" class="item" data-owl-filter=".UrbanInfrastructure">URBAN INFRASTRUCTURE</a>
+                        <a href="#" class="item" data-owl-filter=".Residential">RESIDENTIAL</a>
+                        <a href="#" class="item" data-owl-filter=".EVCharging">EV CHARGING</a>
+                        <a href="#" class="item" data-owl-filter=".ICPServices">ICP SERVICES</a>
+                        <a href="#" class="item" data-owl-filter=".EmergencyCallout">EMERGENCY CALLOUT</a>
+                    </nav>
+                </div>
+
+                <div class="owl-carousel project_carousel">
+                    <div class="item UrbanInfrastructure">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/Urban Infrastructure.jpg" alt="" />
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Urban Infrastructure
+                                </h5>
+                                <p>
+                                    The team recently at work on Edgware Road NW9 fixing faulty street lighting to keep London moving.
+                                </p>
+                            </div>
                         </div>
-                        <p>
-                            <a href="tel:+4407548850770" style="color: #F79D23;font-weight:bold;">
-                                Call : 07548 850770
-                            </a>
-                        </p>
-                        <P>
-                            <a href="mailto:admin@agcablejointing.com?subject=Inquiry&body=Hello AG Cable Jointing Team, I would like more information about..." style="color: #F79D23;font-weight:bold;">
-                                Email : admin@agcablejointing.com
-                            </a>
-                        </P>
-                        <div class="heading_container">
-                            <h2>
-                                ...OR LEAVE A MESSAGE
-                            </h2>
+                    </div>
+                    <div class="item Residential">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/Residential.jpg" alt="" />
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Residential
+                                </h5>
+                                <p>
+                                    May saw the team hooking up new services for 5 houses in a residential project in Watford in conjunction with Eastern Power Network DNO.
+                                </p>
+                            </div>
                         </div>
-                        <div class="form_container">
-                            <form id="contact-form">
-                                <div>
-                                    <input type="text" placeholder="Your Name" id="name" name="name" required />
-                                </div>
-                                <div>
-                                    <input type="text" placeholder="Phone Number" id="phone" name="phone" required />
-                                </div>
-                                <div>
-                                    <input type="email" placeholder="Email" id="email" name="email" required />
-                                </div>
-                                <div>
-                                    <input type="text" class="message-box" placeholder="Message" id="message" name="message" required />
-                                </div>
-                                <div class="btn_box">
-                                    <button type ="submit">SEND</button>
-                                </div>
-                            </form>
+                    </div>
+                    <div class="item EVCharging">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/EV Charging.jpg" alt="" />
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    EV Charging
+                                </h5>
+                                <p>
+                                    AG Cable Jointing recently hooked up this EV Charging System in Folkestone, Kent.
+                                    4 Type 2 7 kW AC charging points are now helping keep EV drivers on the move.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ICPServices">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/ICP Services.jpg" alt="" />
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    ICP Services
+                                </h5>
+                                <p>
+                                    The team have carried out over 100 signal injections in Greater London to positively identify Low Voltage cables for leading ICPs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item EmergencyCallout">
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="images/Live LV Cable Jointing.jpg" alt="" />
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Emergency Callouts
+                                </h5>
+                                <p>
+                                    AG Cable Jointing have teams available for emergency callouts 24 hours a day, and 7 days a week.
+                                    In an emergency, the team can work with live cable jointing to restore power as soon as possible.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- end contact section -->
-
+    <!-- end projects section -->
+    
     <!-- info section -->
     <section class="info_section ">
         <div class="container">
@@ -224,7 +245,7 @@
             </div>
         </div>
     </section>
-    <!-- end info section -->
+    <!-- end info_section -->
 
     <!-- footer section -->
     <footer class="footer_section">
@@ -244,10 +265,10 @@
     <script src="js/bootstrap.js"></script>
     <!-- owl slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!--  OwlCarousel 2 - Filter -->
+    <!-- OwlCarousel 2 - Filter -->
     <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
     <!-- custom js -->
-    <script src="js/custom.js"></script>
+    <script src="js/custom.js" type="text/JavaScript"></script>
 
 </body>
 </html>
