@@ -33,6 +33,40 @@
     <!-- responsive style -->
     <link href="../css/responsive.css" rel="stylesheet" />
 
+    <!-- EmailJS: load the EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- EmailJS: initialise the SDK with public key -->
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "kM0y3IZbS6xJYkb0u",
+            });
+        })();
+    </script>
+
+    <!-- EmailJS: contact form submission -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('service_nr3714s', 'template_fs7q1vt', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        alert("Thankyou for uploading your invoice. We will send through confirmation once payment has been made.");
+                        // return user to team hub after message delivery
+                        window.location.href = "team_hub.html";
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                        alert("Sorry, your invoice could not be sent at this time. Please try email or phone to get in touch.");
+                        // return user to team hub after message delivery
+                        window.location.href = "team_hub.html";
+                    });
+            });
+        }
+    </script>
+
 </head>
 
 <body class="sub_page">
