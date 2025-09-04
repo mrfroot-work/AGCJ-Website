@@ -902,7 +902,7 @@ a:focus {
     }
 
 .contact_section .heading.container .img-box img {
-    height: 100%;
+    height: 50%;
     -webkit-filter: brightness(0);
     filter: brightness(0);
     -webkit-transition: all .3s;
@@ -911,7 +911,7 @@ a:focus {
 
 .contact_section .heading_container h2 {
   text-transform: uppercase;
-  margin-left: 35px;
+  margin-left: 45px;
 }
 
 .contact_section .form_container {
