@@ -899,7 +899,6 @@ a:focus {
 
  .contact_section .heading_container .img-box {
     height: 25px;
-    width: 35px;
     }
 
 .contact_section .heading.container .img-box img {
@@ -912,6 +911,7 @@ a:focus {
 
 .contact_section .heading_container h2 {
   text-transform: uppercase;
+  margin-left: 35px;
 }
 
 .contact_section .form_container {
