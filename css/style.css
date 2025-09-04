@@ -889,17 +889,18 @@ a:focus {
         }
 
 .contact_section {
-  position: relative;
+    position: relative;
 }
 
 .contact_section .heading_container {
-  margin-top: 50px;
-  margin-bottom: 25px;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 
-.contact_section .heading_container .img-box {
+ .contact_section .heading_container .img-box {
     height: 25px;
-}
+    width: 35px;
+    }
 
 .contact_section .heading.container .img-box img {
     height: 100%;
