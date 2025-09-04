@@ -892,7 +892,18 @@ a:focus {
   position: relative;
 }
 
-.contact_section .heading_container {
+.contact_section .heading_container .img-box {
+    height: 45px;
+}
+
+.contact_section .heading.container .img-box img {
+    height: 100%;
+    -webkit-filter: brightness(0);
+    filter: brightness(0);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+
+}.contact_section .heading_container {
   margin-top: 50px;
   margin-bottom: 25px;
 }
@@ -903,18 +914,6 @@ a:focus {
 
 .contact_section .form_container {
   margin-right: 15px;
-}
-
-.contact_section .form_container .img-box {
-    height: 65px;
-}
-
-.contact_section .form.container .img-box img {
-    height: 100%;
-    -webkit-filter: brightness(0);
-    filter: brightness(0);
-    -webkit-transition: all .3s;
-    transition: all .3s;
 }
 
 .contact_section .form_container input {
