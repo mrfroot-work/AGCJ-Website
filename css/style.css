@@ -892,8 +892,13 @@ a:focus {
   position: relative;
 }
 
+.contact_section .heading_container {
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
 .contact_section .heading_container .img-box {
-    height: 45px;
+    height: 25px;
 }
 
 .contact_section .heading.container .img-box img {
@@ -902,11 +907,7 @@ a:focus {
     filter: brightness(0);
     -webkit-transition: all .3s;
     transition: all .3s;
-
-}.contact_section .heading_container {
-  margin-top: 50px;
-  margin-bottom: 25px;
-}
+    }
 
 .contact_section .heading_container h2 {
   text-transform: uppercase;
